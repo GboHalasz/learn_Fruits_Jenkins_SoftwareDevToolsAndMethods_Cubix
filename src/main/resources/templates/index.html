@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FruitsNameDisplay</title>
+</head>
+<body>
+<header>
+    <h1>Fruit Name Display</h1>
+</header>
+<main>
+    <section>
+        <h2>Fruit list:</h2>
+        <ul>
+            <li th:each="fruit: ${fruits}">
+                <p style="text-transform: capitalize;" th:text="${fruit}"></p>
+            </li>
+        </ul>
+    </section>
+</main>
+</body>
+</html>
