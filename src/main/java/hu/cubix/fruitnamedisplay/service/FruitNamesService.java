@@ -17,4 +17,8 @@ public class FruitNamesService {
 		List<String> fruitnames = config.getFruits().getFruitNames();
 		return fruitnames;
 	}
+	
+	public int countFruits() {
+		return getFruits().size();
+	}
 }
