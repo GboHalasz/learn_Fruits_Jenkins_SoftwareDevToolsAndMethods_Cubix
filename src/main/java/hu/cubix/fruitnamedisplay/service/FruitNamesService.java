@@ -18,7 +18,7 @@ public class FruitNamesService {
 		return fruitnames;
 	}
 	
-	public int countFruits() {
+	public int countElementsOfFruitList() {
 		return getFruits().size();
 	}
 }
