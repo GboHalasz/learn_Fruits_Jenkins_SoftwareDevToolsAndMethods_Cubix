@@ -1,5 +1,6 @@
 package hu.cubix.fruitnamedisplay.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +14,20 @@ import hu.cubix.fruitnamedisplay.service.FruitNamesService;
 @RequestMapping("/")
 public class FruitsNameDisplayThymeleafController {
 
-  @Autowired
-  FruitNamesService fruitNamesService;
+	@Autowired
+	FruitNamesService fruitNamesService;
 
-  @GetMapping
-  public String home(Map<String, Object> model) {    
-    model.put("fruits", fruitNamesService.getFruits());
-    return "index";
-  }
+	private List<String> getFruits() {
+		
+		return fruitNamesService.getFruits();
+		
+	}
+
+	@GetMapping
+
+	public String home(Map<String, Object> model) {
+		List<String> fruits = getFruits();
+		model.put("fruits", fruits);
+		return "index";
+	}
 }
