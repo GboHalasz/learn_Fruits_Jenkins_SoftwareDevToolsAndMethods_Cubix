@@ -17,7 +17,7 @@ public class FruitNamesService {
 		List<String> fruitnames = config.getFruits().getFruitNames();
 		return fruitnames;
 	}
-//Ez egy teszt komment
+	
 	public int countElementsOfFruitList() {
 		return getFruits().size();
 	}
